@@ -1,23 +1,40 @@
-/* BetterAfter — one page with English + Hebrew anchors */
+/* BetterAfter — Munich wild garden palette */
+/* One-page English + Hebrew anchors version */
 
 :root {
-  --cream: #fffaf0;
-  --butter: #fff1a8;
-  --daisy: #ffd84d;
-  --sun: #ffc83d;
-  --leaf: #87b985;
-  --leaf-light: #dff0d8;
-  --mint: #dff4e7;
-  --sky: #dceffc;
-  --peach: #ffe1c7;
-  --pink: #ffdce8;
-  --lavender: #eadfff;
-  --ink: #26332c;
-  --green: #285744;
-  --muted: #6d796f;
-  --paper: #ffffff;
-  --line: rgba(80, 112, 92, 0.15);
-  --shadow: 0 18px 48px rgba(70, 92, 70, 0.12);
+  --cream: #fff8ed;
+  --paper: #fffdf8;
+
+  /* Munich-inspired muted palette */
+  --sky: #dcecf2;
+  --sky-soft: #edf7fa;
+  --wild-green: #b9cfa5;
+  --wild-green-deep: #6f8f68;
+  --leaf: #8fae78;
+  --leaf-dark: #395f45;
+
+  --butter: #f4dc8a;
+  --yellow-soft: #fff1bd;
+  --apricot: #e9a36f;
+  --apricot-soft: #f6d3b9;
+
+  --pink-building: #e6b1b8;
+  --pink-soft: #f8dbe0;
+  --lavender: #c9b6d9;
+  --lavender-soft: #eadff0;
+  --violet: #7f6b93;
+
+  --terracotta: #c9795f;
+  --stone: #d9d2c6;
+
+  --ink: #26312c;
+  --green: #2f5a42;
+  --muted: #6d776f;
+  --line: rgba(69, 94, 73, 0.16);
+
+  --shadow: 0 18px 48px rgba(58, 77, 56, 0.12);
+  --shadow-soft: 0 10px 28px rgba(58, 77, 56, 0.08);
+
   --radius-xl: 34px;
   --radius-lg: 24px;
   --max: 1140px;
@@ -29,7 +46,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding-top: 110px;
+  scroll-padding-top: 112px;
 }
 
 body {
@@ -38,9 +55,11 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.65;
   background:
-    radial-gradient(circle at 12% 8%, rgba(255, 216, 77, 0.35), transparent 13rem),
-    radial-gradient(circle at 84% 16%, rgba(135, 185, 133, 0.32), transparent 18rem),
-    linear-gradient(180deg, #fffdf5 0%, #f5fbef 48%, #fff7e6 100%);
+    radial-gradient(circle at 9% 8%, rgba(230, 177, 184, 0.38), transparent 16rem),
+    radial-gradient(circle at 84% 9%, rgba(220, 236, 242, 0.9), transparent 18rem),
+    radial-gradient(circle at 78% 44%, rgba(201, 182, 217, 0.22), transparent 18rem),
+    radial-gradient(circle at 20% 70%, rgba(244, 220, 138, 0.32), transparent 18rem),
+    linear-gradient(180deg, #fffaf0 0%, #f4f7ef 48%, #fff3e7 100%);
 }
 
 [lang="he"] {
@@ -64,8 +83,8 @@ a {
   gap: 22px;
   border: 1px solid var(--line);
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.82);
-  box-shadow: 0 10px 30px rgba(70, 92, 70, 0.08);
+  background: rgba(255, 253, 248, 0.82);
+  box-shadow: var(--shadow-soft);
   backdrop-filter: blur(14px);
 }
 
@@ -82,10 +101,25 @@ a {
   display: grid;
   place-items: center;
   border-radius: 50%;
-  background: var(--butter);
+  background:
+    radial-gradient(circle at center, var(--terracotta) 0 16%, transparent 17%),
+    conic-gradient(
+      from 0deg,
+      var(--butter) 0 12%,
+      transparent 12% 18%,
+      var(--butter) 18% 30%,
+      transparent 30% 36%,
+      var(--butter) 36% 48%,
+      transparent 48% 54%,
+      var(--butter) 54% 66%,
+      transparent 66% 72%,
+      var(--butter) 72% 84%,
+      transparent 84% 90%,
+      var(--butter) 90% 100%
+    );
   color: var(--green);
-  font-size: 1.65rem;
-  box-shadow: inset 0 0 0 7px rgba(255, 255, 255, 0.48);
+  font-size: 0;
+  box-shadow: inset 0 0 0 6px rgba(255, 255, 255, 0.42);
 }
 
 .brand strong {
@@ -117,11 +151,15 @@ a {
   font-size: 0.94rem;
 }
 
+.main-nav a:hover {
+  color: var(--violet);
+}
+
 .language-pill,
 .local-language-nav a {
   padding: 8px 14px;
   border-radius: 999px;
-  background: var(--mint);
+  background: rgba(220, 236, 242, 0.68);
   border: 1px solid var(--line);
   text-decoration: none;
   color: var(--green);
@@ -160,6 +198,7 @@ main {
   align-items: stretch;
 }
 
+/* Munich garden illustration panel */
 .spring-scene {
   position: relative;
   min-height: 520px;
@@ -167,19 +206,60 @@ main {
   border-radius: var(--radius-xl);
   border: 1px solid var(--line);
   background:
-    linear-gradient(180deg, #dff3ff 0%, #fff7cf 56%, #dcf2ce 100%);
+    linear-gradient(180deg, var(--sky-soft) 0%, #fff3da 48%, #dbe9cf 100%);
   box-shadow: var(--shadow);
+}
+
+/* soft Munich-building blocks in the background */
+.spring-scene::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to bottom, transparent 0 15%, rgba(255, 255, 255, 0.5) 15% 16%, transparent 16%),
+    linear-gradient(90deg,
+      rgba(230, 177, 184, 0.46) 0 18%,
+      rgba(255, 253, 248, 0.25) 18% 19%,
+      rgba(201, 182, 217, 0.32) 19% 35%,
+      rgba(255, 253, 248, 0.25) 35% 36%,
+      rgba(233, 163, 111, 0.36) 36% 55%,
+      rgba(255, 253, 248, 0.25) 55% 56%,
+      rgba(220, 236, 242, 0.38) 56% 72%,
+      rgba(255, 253, 248, 0.25) 72% 73%,
+      rgba(230, 177, 184, 0.34) 73% 100%
+    );
+  height: 150px;
+  opacity: 0.72;
+}
+
+/* window hints */
+.spring-scene::after {
+  content: "";
+  position: absolute;
+  top: 34px;
+  left: 34px;
+  right: 34px;
+  height: 68px;
+  background:
+    repeating-linear-gradient(
+      90deg,
+      rgba(47, 90, 66, 0.18) 0 18px,
+      transparent 18px 54px
+    );
+  opacity: 0.38;
 }
 
 .sun {
   position: absolute;
-  top: 44px;
-  inset-inline-start: 52px;
-  width: 112px;
-  height: 112px;
+  top: 176px;
+  inset-inline-start: 64px;
+  width: 88px;
+  height: 88px;
   border-radius: 50%;
-  background: var(--sun);
-  box-shadow: 0 0 0 18px rgba(255, 200, 61, 0.18), 0 0 62px rgba(255, 200, 61, 0.4);
+  background: var(--butter);
+  box-shadow:
+    0 0 0 18px rgba(244, 220, 138, 0.16),
+    0 0 58px rgba(244, 220, 138, 0.36);
 }
 
 .hill {
@@ -192,28 +272,53 @@ main {
 }
 
 .hill-one {
-  background: #bfe3ae;
+  background: #c7dcb6;
   bottom: -74px;
 }
 
 .hill-two {
-  background: #91c983;
+  background: #9cc084;
   bottom: -125px;
   transform: rotate(-2deg);
+}
+
+/* wild meadow texture */
+.hill-one::before,
+.hill-two::before {
+  content: "";
+  position: absolute;
+  left: 8%;
+  right: 8%;
+  top: 20px;
+  height: 150px;
+  background:
+    repeating-linear-gradient(
+      78deg,
+      transparent 0 10px,
+      rgba(57, 95, 69, 0.28) 10px 12px,
+      transparent 12px 20px
+    ),
+    repeating-linear-gradient(
+      105deg,
+      transparent 0 13px,
+      rgba(111, 143, 104, 0.22) 13px 15px,
+      transparent 15px 23px
+    );
+  opacity: 0.38;
 }
 
 .note-card {
   position: absolute;
   right: 50%;
-  bottom: 110px;
-  transform: translateX(50%) rotate(-4deg);
-  width: min(290px, 76%);
+  bottom: 118px;
+  transform: translateX(50%) rotate(-3deg);
+  width: min(300px, 76%);
   padding: 28px 24px;
   border-radius: 20px;
-  background: rgba(255, 255, 255, 0.88);
-  box-shadow: 0 18px 40px rgba(62, 90, 66, 0.13);
+  background: rgba(255, 253, 248, 0.9);
+  box-shadow: 0 18px 40px rgba(62, 90, 66, 0.14);
   text-align: center;
-  border: 1px solid rgba(255,255,255,0.7);
+  border: 1px solid rgba(255, 255, 255, 0.72);
 }
 
 .note-card p {
@@ -224,49 +329,109 @@ main {
   line-height: 1.45;
 }
 
+/* yellow wildflowers */
 .daisy {
   position: absolute;
-  width: 82px;
-  height: 82px;
+  width: 76px;
+  height: 76px;
   border-radius: 50%;
   background:
     radial-gradient(circle at center, #8b6236 0 14%, transparent 15%),
-    conic-gradient(from 0deg, #ffd84d 0 10%, transparent 10% 15%, #ffd84d 15% 25%, transparent 25% 30%, #ffd84d 30% 40%, transparent 40% 45%, #ffd84d 45% 55%, transparent 55% 60%, #ffd84d 60% 70%, transparent 70% 75%, #ffd84d 75% 85%, transparent 85% 90%, #ffd84d 90% 100%);
+    conic-gradient(
+      from 0deg,
+      var(--butter) 0 10%,
+      transparent 10% 15%,
+      var(--butter) 15% 25%,
+      transparent 25% 30%,
+      var(--butter) 30% 40%,
+      transparent 40% 45%,
+      var(--butter) 45% 55%,
+      transparent 55% 60%,
+      var(--butter) 60% 70%,
+      transparent 70% 75%,
+      var(--butter) 75% 85%,
+      transparent 85% 90%,
+      var(--butter) 90% 100%
+    );
   filter: drop-shadow(0 10px 12px rgba(96, 111, 66, 0.12));
 }
 
 .daisy::after {
   content: "";
   position: absolute;
-  left: 39px;
-  top: 64px;
+  left: 36px;
+  top: 60px;
   width: 5px;
-  height: 110px;
+  height: 116px;
   border-radius: 999px;
-  background: #5f9f57;
+  background: #6f9b59;
   z-index: -1;
 }
 
 .daisy span {
   position: absolute;
   right: 12px;
-  top: 97px;
+  top: 92px;
   width: 34px;
   height: 15px;
   border-radius: 50%;
-  background: #79b96f;
+  background: #88ad70;
   transform: rotate(-18deg);
 }
 
-.daisy-one { bottom: 40px; left: 36px; transform: rotate(7deg) scale(1.1); }
-.daisy-two { bottom: 78px; right: 54px; transform: rotate(-12deg) scale(0.85); }
-.daisy-three { bottom: 28px; right: 145px; transform: rotate(16deg) scale(0.72); }
-.daisy-four { bottom: 130px; left: 160px; transform: rotate(-4deg) scale(0.62); }
+.daisy-one {
+  bottom: 40px;
+  left: 32px;
+  transform: rotate(7deg) scale(1.06);
+}
+
+.daisy-two {
+  bottom: 82px;
+  right: 54px;
+  transform: rotate(-12deg) scale(0.82);
+}
+
+.daisy-three {
+  bottom: 30px;
+  right: 145px;
+  transform: rotate(16deg) scale(0.7);
+}
+
+.daisy-four {
+  bottom: 144px;
+  left: 155px;
+  transform: rotate(-4deg) scale(0.58);
+}
+
+/* extra purple wildflower clusters */
+.daisy-one::before,
+.daisy-two::before,
+.daisy-three::before,
+.daisy-four::before {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle, var(--violet) 0 42%, transparent 43%),
+    radial-gradient(circle at -8px 2px, var(--lavender) 0 38%, transparent 39%),
+    radial-gradient(circle at 8px 2px, var(--lavender) 0 38%, transparent 39%),
+    radial-gradient(circle at 0 9px, var(--lavender) 0 38%, transparent 39%);
+  right: -22px;
+  top: 18px;
+  box-shadow:
+    36px 36px 0 -2px rgba(127, 107, 147, 0.72),
+    -52px 74px 0 -3px rgba(201, 182, 217, 0.78);
+}
 
 .hero-content {
   border-radius: var(--radius-xl);
   border: 1px solid var(--line);
-  background: rgba(255, 255, 255, 0.78);
+  background:
+    radial-gradient(circle at 100% 0%, rgba(230, 177, 184, 0.22), transparent 14rem),
+    radial-gradient(circle at 0% 100%, rgba(244, 220, 138, 0.2), transparent 12rem),
+    rgba(255, 253, 248, 0.82);
   box-shadow: var(--shadow);
   padding: clamp(34px, 5vw, 64px);
   display: flex;
@@ -276,7 +441,7 @@ main {
 
 .eyebrow {
   margin: 0 0 12px;
-  color: #738f35;
+  color: var(--wild-green-deep);
   font-weight: 800;
   letter-spacing: 0.05em;
   font-size: 0.88rem;
@@ -329,7 +494,7 @@ h1 {
 }
 
 .button.soft {
-  background: var(--butter);
+  background: var(--yellow-soft);
   color: var(--green);
   border: 1px solid rgba(40, 87, 68, 0.12);
 }
@@ -342,13 +507,14 @@ h1 {
   justify-content: center;
   gap: 14px;
   border-radius: var(--radius-lg);
-  background: rgba(255, 241, 168, 0.58);
+  background:
+    linear-gradient(90deg, rgba(255, 241, 189, 0.68), rgba(234, 223, 240, 0.42));
   border: 1px solid var(--line);
   text-align: center;
 }
 
 .mantra span {
-  color: var(--green);
+  color: var(--violet);
   font-size: 1.5rem;
 }
 
@@ -394,21 +560,39 @@ h1 {
   padding: 26px;
   border-radius: var(--radius-lg);
   border: 1px solid var(--line);
-  box-shadow: var(--shadow);
+  box-shadow: var(--shadow-soft);
   background: var(--paper);
-  transition: transform 0.18s ease;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
 }
 
 .growth-card:hover {
   transform: translateY(-4px);
+  box-shadow: var(--shadow);
 }
 
-.growth-card.yellow { background: linear-gradient(135deg, #fff8c8, #fffef5); }
-.growth-card.peach { background: linear-gradient(135deg, var(--peach), #fff9f0); }
-.growth-card.green { background: linear-gradient(135deg, var(--leaf-light), #fbfff7); }
-.growth-card.blue { background: linear-gradient(135deg, var(--sky), #ffffff); }
-.growth-card.pink { background: linear-gradient(135deg, var(--pink), #ffffff); }
-.growth-card.lavender { background: linear-gradient(135deg, var(--lavender), #ffffff); }
+.growth-card.yellow {
+  background: linear-gradient(135deg, #fff4c8, #fffdf6);
+}
+
+.growth-card.peach {
+  background: linear-gradient(135deg, var(--apricot-soft), #fff8ef);
+}
+
+.growth-card.green {
+  background: linear-gradient(135deg, #dcecd2, #fbfff7);
+}
+
+.growth-card.blue {
+  background: linear-gradient(135deg, var(--sky), #ffffff);
+}
+
+.growth-card.pink {
+  background: linear-gradient(135deg, var(--pink-soft), #ffffff);
+}
+
+.growth-card.lavender {
+  background: linear-gradient(135deg, var(--lavender-soft), #ffffff);
+}
 
 .card-icon {
   width: 54px;
@@ -417,7 +601,7 @@ h1 {
   place-items: center;
   margin-bottom: 26px;
   border-radius: 50%;
-  background: rgba(255,255,255,0.72);
+  background: rgba(255, 255, 255, 0.72);
   color: var(--green);
   font-size: 1.45rem;
 }
@@ -446,11 +630,13 @@ h1 {
 .next-chapter {
   border: 1px solid var(--line);
   border-radius: var(--radius-xl);
-  box-shadow: var(--shadow);
+  box-shadow: var(--shadow-soft);
 }
 
 .paper-list {
-  background: rgba(255, 255, 255, 0.84);
+  background:
+    radial-gradient(circle at 0% 0%, rgba(230, 177, 184, 0.16), transparent 12rem),
+    rgba(255, 253, 248, 0.86);
   padding: clamp(28px, 4vw, 46px);
 }
 
@@ -474,8 +660,9 @@ h1 {
 
 .playlist-card {
   background:
-    radial-gradient(circle at 18% 12%, rgba(255, 216, 77, 0.36), transparent 9rem),
-    linear-gradient(135deg, #e3f2ff, #fff5ca);
+    radial-gradient(circle at 18% 12%, rgba(244, 220, 138, 0.42), transparent 9rem),
+    radial-gradient(circle at 92% 84%, rgba(201, 182, 217, 0.24), transparent 11rem),
+    linear-gradient(135deg, #e8f4f8, #fff2d2);
   padding: clamp(28px, 4vw, 46px);
 }
 
@@ -493,7 +680,7 @@ h1 {
   place-items: center;
   border-radius: 50%;
   background: white;
-  color: var(--green);
+  color: var(--violet);
   font-size: 1.45rem;
 }
 
@@ -511,7 +698,7 @@ h1 {
   margin-bottom: 14px;
   padding: 14px;
   border-radius: 18px;
-  background: rgba(255,255,255,0.68);
+  background: rgba(255, 255, 255, 0.68);
 }
 
 .track > span {
@@ -520,8 +707,20 @@ h1 {
   flex: 0 0 40px;
   border-radius: 50%;
   background:
-    radial-gradient(circle at center, var(--green) 0 20%, transparent 21%),
-    conic-gradient(var(--daisy) 0 12%, transparent 12% 18%, var(--daisy) 18% 30%, transparent 30% 36%, var(--daisy) 36% 48%, transparent 48% 54%, var(--daisy) 54% 66%, transparent 66% 72%, var(--daisy) 72% 84%, transparent 84% 90%, var(--daisy) 90% 100%);
+    radial-gradient(circle at center, var(--terracotta) 0 18%, transparent 19%),
+    conic-gradient(
+      var(--butter) 0 12%,
+      transparent 12% 18%,
+      var(--butter) 18% 30%,
+      transparent 30% 36%,
+      var(--butter) 36% 48%,
+      transparent 48% 54%,
+      var(--butter) 54% 66%,
+      transparent 66% 72%,
+      var(--butter) 72% 84%,
+      transparent 84% 90%,
+      var(--butter) 90% 100%
+    );
 }
 
 .track strong {
@@ -540,8 +739,9 @@ h1 {
   align-items: center;
   padding: clamp(28px, 4vw, 48px);
   background:
-    linear-gradient(135deg, rgba(223,244,231,0.9), rgba(255,250,240,0.96)),
-    radial-gradient(circle at 0% 100%, rgba(255,216,77,0.32), transparent 10rem);
+    radial-gradient(circle at 12% 100%, rgba(244, 220, 138, 0.28), transparent 13rem),
+    radial-gradient(circle at 100% 20%, rgba(230, 177, 184, 0.18), transparent 12rem),
+    linear-gradient(135deg, rgba(223, 240, 216, 0.86), rgba(255, 250, 240, 0.96));
 }
 
 .next-chapter h2 {
@@ -563,15 +763,15 @@ h1 {
 
 .language-divider span {
   font-size: 1.5rem;
-  color: var(--daisy);
-  text-shadow: 0 1px 0 rgba(40, 87, 68, 0.18);
+  color: var(--butter);
+  text-shadow: 0 1px 0 rgba(40, 87, 68, 0.16);
 }
 
 .language-divider p {
   margin: 0;
   padding: 8px 18px;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.72);
+  background: rgba(255, 253, 248, 0.72);
   border: 1px solid var(--line);
   font-weight: 850;
 }
@@ -655,8 +855,9 @@ h1 {
   }
 
   .sun {
-    width: 82px;
-    height: 82px;
+    top: 160px;
+    width: 72px;
+    height: 72px;
   }
 
   .note-card {

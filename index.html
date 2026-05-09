@@ -1,113 +1,88 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="he" dir="rtl">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>BetterAfter</title>
-  <meta name="description" content="BetterAfter is a gentle, practical space for people navigating life after separation." />
-
+  <title>ערכה למתגרש.ת הטרי.ה | BetterAfter</title>
+  <meta name="description" content="ערכה עדינה, פרקטית ולא שיפוטית למי שנמצאים אחרי פרידה, במהלך פרידה או בתחילת חיים חדשים." />
   <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
   <header class="site-header">
-    <div class="logo">BetterAfter</div>
-
-    <nav class="main-nav">
-      <a href="#about">About</a>
-      <a href="#support">Support</a>
-      <a href="#approach">Approach</a>
-      <a href="#contact">Contact</a>
+    <a class="brand" href="index.html" aria-label="BetterAfter homepage">
+      <span class="brand-icon">♡</span>
+      <span><strong>ערכה למתגרש.ת הטרי.ה</strong><small>התחלה חדשה. בקצב שלך.</small></span>
+    </a>
+    <nav class="main-nav" aria-label="ניווט ראשי">
+      <a class="active" href="index.html">התחלה</a>
+      <a href="#paths">מסלולים</a>
+      <a href="#music">מוזיקה</a>
+      <a href="#food">מתכונים</a>
+      <a href="#about">על האתר</a>
+      <a class="language-link" href="en.html">English</a>
     </nav>
+    <p class="tiny-note">זה בסדר לא לדעת הכל ♡</p>
   </header>
 
   <main>
     <section class="hero">
-      <div class="hero-text">
-        <p class="eyebrow">Life after separation</p>
-        <h1>Begin again, gently.</h1>
-        <p class="lead">
-          BetterAfter is a calm and practical space for people navigating separation,
-          post-separation life, co-parenting, changing routines, and the slow work of rebuilding.
-        </p>
-        <a class="button" href="#about">Start here</a>
+      <div class="hero-image" aria-hidden="true">
+        <div class="photo-card">
+          <div class="cup"></div>
+          <div class="notebook"><p>צעד קטן,<br>ביום.<br>זה מספיק.</p><span>♡</span></div>
+        </div>
       </div>
-
-      <div class="hero-card">
-        <h2>You are not starting from zero.</h2>
-        <p>
-          You are carrying experience, care, disappointment, responsibility,
-          hope, fatigue, and knowledge. BetterAfter begins there.
-        </p>
+      <div class="hero-content">
+        <p class="eyebrow">לא מדריך משפטי. לא טיפול. לא קלישאות.</p>
+        <h1>ערכה למתגרש.ת הטרי.ה</h1>
+        <p class="hero-subtitle">מוזיקה, מתכונים, מסלולים קטנים וסדר בתוך הבלגן.</p>
+        <p class="hero-text">יש רגעים שבהם לא צריך פתרון גדול. צריך מקום שקט לנשום, לבחור צעד אחד קטן, ולהמשיך.</p>
+        <div class="soft-message"><strong>היום לא חייבים להבין הכול.</strong><span>מספיק לבחור דבר אחד קטן: לשתות מים, לצאת להליכה, לשלוח הודעה לחברה, או להכין משהו חם לאכול.</span></div>
       </div>
     </section>
 
-    <section id="about" class="section">
-      <p class="eyebrow">About</p>
-      <h2>A space for the in-between and the after.</h2>
-      <p>
-        Separation is not only a legal event. It is an emotional, practical,
-        social, financial, and relational transition. BetterAfter offers language,
-        tools, and a gentle structure for people living through that transition.
-      </p>
+    <section id="paths" class="quick-cards" aria-label="שלוש כניסות ראשיות">
+      <article class="quick-card"><div class="circle-icon">☘</div><h2>מסלולי פיתוח אישי</h2><p>צעדים קטנים להתארגנות, גבולות, בית, גוף וכסף.</p><a href="#first-steps">לעבור למסלולים</a></article>
+      <article class="quick-card"><div class="circle-icon">♪</div><h2>פלייליסטים</h2><p>מוזיקה רכה וחכמה: להליכה, לניקוי, לבכי, וליום שקמים מן הקרקע.</p><a href="#music">לפלייליסטים</a></article>
+      <article class="quick-card"><div class="circle-icon">☕</div><h2>מתכונים קלים</h2><p>אוכל מהיר, פשוט ומנחם למי שאין לו כוח לבשל אבל צריך לאכול.</p><a href="#food">למתכונים</a></article>
     </section>
 
-    <section id="support" class="section">
-      <p class="eyebrow">Support</p>
-      <h2>What you may find here</h2>
-
-      <div class="cards">
-        <article class="card">
-          <h3>Emotional orientation</h3>
-          <p>
-            Words for grief, relief, uncertainty, loneliness, anger, and the mixed feelings
-            that often come with separation.
-          </p>
-        </article>
-
-        <article class="card">
-          <h3>Practical rebuilding</h3>
-          <p>
-            Small steps for routines, paperwork, home life, support networks,
-            and the everyday logistics of a reorganized life.
-          </p>
-        </article>
-
-        <article class="card">
-          <h3>Co-parenting transitions</h3>
-          <p>
-            Reflections and tools for parents navigating boundaries, schedules,
-            communication, and children’s stability.
-          </p>
-        </article>
-      </div>
+    <section id="first-steps" class="dashboard">
+      <article class="panel small-panel">
+        <h2>לאן הולכים מכאן?</h2>
+        <div class="icon-list">
+          <div><span>☷</span><strong>שבוע ראשון</strong><p>מה חשוב עכשיו</p></div>
+          <div><span>□</span><strong>סדר במסמכים</strong><p>רשימות וכללים</p></div>
+          <div><span>♢</span><strong>גבולות</strong><p>איך שומרים על עצמך</p></div>
+          <div><span>♙</span><strong>תמיכה</strong><p>מי סביבך באמת</p></div>
+        </div>
+      </article>
+      <article id="music" class="panel wide-panel">
+        <div class="panel-title-row"><a href="#">← לכל הפלייליסטים</a><h2>פלייליסטים למתגרשים טריים</h2></div>
+        <div class="media-row">
+          <div class="media-card"><div class="media-thumb thumb-one"><span>▶</span></div><h3>זמני נסיעה</h3><p>להירגע באוטו</p></div>
+          <div class="media-card"><div class="media-thumb thumb-two"><span>▶</span></div><h3>הליכת ערב</h3><p>להחזיר קצב</p></div>
+          <div class="media-card"><div class="media-thumb thumb-three"><span>▶</span></div><h3>לשטוף כלים</h3><p>ולבנות קצת</p></div>
+          <div class="media-card"><div class="media-thumb thumb-four"><span>▶</span></div><h3>לימים גשומים</h3><p>ולב רגיש</p></div>
+        </div>
+      </article>
+      <article id="food" class="panel wide-panel">
+        <div class="panel-title-row"><a href="#">← לכל המתכונים</a><h2>מתכונים קלים למתחילים מחדש</h2></div>
+        <div class="media-row">
+          <div class="media-card"><div class="food-thumb food-one"><span>♡</span></div><h3>פסטה לימון</h3><p>בחמש דקות</p></div>
+          <div class="media-card"><div class="food-thumb food-two"><span>♡</span></div><h3>טוסט אבוקדו</h3><p>וביצה</p></div>
+          <div class="media-card"><div class="food-thumb food-three"><span>♡</span></div><h3>מרק כתום</h3><p>מהיר</p></div>
+          <div class="media-card"><div class="food-thumb food-four"><span>♡</span></div><h3>קערת אורז</h3><p>וביצה</p></div>
+        </div>
+      </article>
     </section>
 
-    <section id="approach" class="section">
-      <p class="eyebrow">Approach</p>
-      <h2>Not “move on”. Move with care.</h2>
-      <p>
-        BetterAfter does not assume that separation is either failure or liberation.
-        For many people, it is complex: painful and necessary, destabilizing and clarifying.
-        This site holds that complexity without judgment.
-      </p>
-    </section>
-
-    <section id="contact" class="section">
-      <p class="eyebrow">Contact</p>
-      <h2>Interested in BetterAfter?</h2>
-      <p>
-        This is an early version of the site. For collaborations, resources,
-        workshops, or community updates, please get in touch. 
-      </p>
-
-      <a class="button" href="mailto:inbarliv@gmail.com">Email BetterAfter</a>
+    <section id="about" class="bottom-grid">
+      <article class="bottom-card"><div class="line-heart">♡</div><h2>למה אתר כזה?</h2><p>כי הרבה אנשים אחרי פרידה צריכים פחות רעש ויותר סדר קטן: מילים פשוטות, הרגלים קטנים, אוכל, מוזיקה, ומרחב שלא שופט.</p></article>
+      <article class="bottom-card github-card"><div class="github-mark">GH</div><h2>נבנה ב־GitHub Pages</h2><p>אתר סטטי, קליל ונקי. בלי מערכת מורכבת ובלי backend. רק HTML ו־CSS.</p></article>
+      <article class="bottom-card handwritten"><p>לנשום. עוד יום.<br>צעד קטן מספיק.</p><span>♡</span></article>
     </section>
   </main>
-
-  <footer class="site-footer">
-    <p>© 2026 BetterAfter. All rights reserved.</p>
-  </footer>
+  <footer class="site-footer"><p>© 2026 BetterAfter. All rights reserved.</p><a href="en.html">English version</a></footer>
 </body>
 </html>

@@ -1,24 +1,10 @@
-# BetterAfter static website
+# BetterAfter bilingual static site
 
-This folder contains a simple static website for BetterAfter.
+Upload these files to the root of the GitHub Pages repository:
 
-## Files
-- `index.html`
-- `styles.css`
+- index.html — Hebrew homepage
+- en.html — English homepage
+- styles.css — shared design
 
-## How to publish on GitHub Pages
-1. Create a new GitHub repository.
-2. Upload `index.html` and `styles.css` to the root folder of the repository.
-3. Go to Settings → Pages.
-4. Under "Build and deployment", choose:
-   - Source: Deploy from a branch
-   - Branch: main
-   - Folder: /root
-5. Save.
-6. Wait a minute or two. GitHub will give you a public link.
-
-## Before publishing
-Replace the placeholder email address:
-`hello@betterafter.org`
-
-You can replace it with your real email address in `index.html`.
+Hebrew page: https://betterafter.inbarlivnat.com/
+English page: https://betterafter.inbarlivnat.com/en.html

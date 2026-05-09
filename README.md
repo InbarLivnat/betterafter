@@ -1,10 +1,14 @@
-# BetterAfter bilingual static site
+# BetterAfter — One Page with Anchors
 
 Upload these files to the root of the GitHub Pages repository:
 
-- index.html — Hebrew homepage
-- en.html — English homepage
-- styles.css — shared design
+- index.html
+- styles.css
 
-Hebrew page: https://betterafter.inbarlivnat.com/
-English page: https://betterafter.inbarlivnat.com/en.html
+This version starts in English and includes the Hebrew version further down the same page.
+
+English:
+https://betterafter.inbarlivnat.com/
+
+Hebrew anchor:
+https://betterafter.inbarlivnat.com/#hebrew
